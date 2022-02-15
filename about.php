@@ -57,19 +57,10 @@ include('includes/config.php');
                             <h2>car washing and detailing</h2>
                         </div>
                         <div class="about-content">
-<?php 
-$sql = "SELECT type,detail from tblpages where type='aboutus'";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-foreach($results as $result)
-{       
-?>
-
-                            <p>
-                            <?php   echo $result->detail; ?>
-                            </p>
-                        <?php } ?>
+                        <p>
+                        360 AutoSpa is a brand which is literally going to change the way people think about car cleaning. It is a unique mechanized car cleaning concept where cars are getting pampered by the latest equipments including high pressure cleaning machines,
+                         spray injection and extraction machines, high powered vacuum cleaners, steam cleaners and so on.
+                            </p>     
                         <hr />
                             <ul>
                                 <li><i class="far fa-check-circle"></i>Seats washing</li>
