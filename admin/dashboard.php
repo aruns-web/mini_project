@@ -109,6 +109,29 @@ $completedbookings=$query3->rowCount();
 					</div>
 </a>
 
+
+<a href="manage-enquires.php" target="_blank">
+			<div class="col-md-3 four-grid">
+						<div class="four-w3ls">
+							<div class="icon">
+								<i class="glyphicon glyphicon-folder-open" aria-hidden="true"></i>
+							</div>
+							<div class="four-text">
+								<h3>Enquiries</h3>
+												<?php $sql2 = "SELECT id from tblenquiry";
+$query2= $dbh -> prepare($sql2);
+$query2->execute();
+$results2=$query2->fetchAll(PDO::FETCH_OBJ);
+$cnt2=$query2->rowCount();
+					?>
+								<h4><?php echo htmlentities($cnt2);?></h4>
+								
+							</div>
+							
+						</div>
+					</div>
+				</a>
+
 		<div class="four-grids">
 
 
