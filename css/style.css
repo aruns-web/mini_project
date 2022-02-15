@@ -1019,6 +1019,8 @@ a:focus {
 }
 
 
+
+
 /*******************************/
 /*********** Team CSS **********/
 /*******************************/
@@ -1105,227 +1107,6 @@ a:focus {
 
 .team .team-social a:hover {
     color: #202C45;
-}
-
-
-/*******************************/
-/******* Testimonial CSS *******/
-/*******************************/
-.testimonial {
-    position: relative;
-    width: 100%;
-    padding: 45px 0;
-}
-
-.testimonial .testimonials-carousel {
-    position: relative;
-    width: calc(100% + 30px);
-    margin: 0 -15px;
-}
-
-.testimonial .testimonial-item {
-    position: relative;
-    width: 100%;
-    padding: 0 15px;
-    display: flex;
-}
-
-.testimonial .testimonial-item img {
-    width: 80px;
-    height: 80px;
-    border-radius: 80px;
-    transform: scale(.8);
-    transition: 2s;
-}
-
-.testimonial .owl-item.center .testimonial-item img {
-    transform: scale(1);
-}
-
-.testimonial .testimonial-text {
-    width: calc(100% - 100px);
-    padding-left: 20px;
-}
-
-.testimonial .testimonial-text h3 {
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-}
-
-.testimonial .testimonial-text h4 {
-    color: #777777;
-    font-size: 15px;
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-.testimonial .testimonial-text p {
-    margin: 0;
-}
-
-.testimonial .testimonial-text p::before {
-    content: "\f10d";
-    font-size: 25px;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: #E81C2E;
-    margin-right: 10px;
-}
-
-.testimonial .owl-dots {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.testimonial .owl-dot {
-    display: inline-block;
-    margin: 0 5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 10px;
-    background: #dddddd;
-}
-
-.testimonial .owl-dot.active {
-    background: #E81C2E;
-}
-
-
-/*******************************/
-/*********** Blog CSS **********/
-/*******************************/
-.blog {
-    position: relative;
-    width: 100%;
-    padding: 45px 0 0 0;
-}
-
-.blog .blog-item {
-    margin-bottom: 45px;
-}
-
-.blog .blog-img {
-    position: relative;
-    width: 100%;
-}
-
-.blog .blog-img img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-.blog .meta-date {
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    bottom: 10%;
-    left: calc(50% - 35px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 70px;
-    background: #202C45;
-    color: #ffffff;
-    opacity: 0;
-    transition: .5s;
-}
-
-.blog .meta-date span {
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-.blog .meta-date strong {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
-.blog .blog-item:hover .meta-date {
-    bottom: calc(50% - 35px);
-    opacity: 1;
-}
-
-.blog .blog-text {
-    padding: 25px 0 20px 0;
-}
-
-.blog .blog-text h3 {
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.blog .blog-text h3 a {
-    color: #202C45;
-}
-
-.blog .blog-text h3 a:hover {
-    color: #E81C2E;
-}
-
-.blog .blog-text p {
-    margin: 0;
-}
-
-.blog .blog-meta {
-    display: flex;
-}
-
-.blog .blog-meta p {
-    margin: 0;
-    font-size: 14px;
-    line-height: 14px;
-    padding: 0 10px;
-    border-right: 1px solid rgba(0, 0, 0, .15);
-}
-
-.blog .blog-meta p:first-child {
-    padding-left: 0;
-}
-
-.blog .blog-meta p:last-child {
-    padding-right: 0;
-    border: none;
-}
-
-.blog .blog-meta i {
-    color: #999999;
-    margin-right: 5px;
-}
-
-.blog .blog-meta a {
-    color: #999999;
-}
-
-.blog .blog-meta a:hover {
-    color: #E81C2E;
-}
-
-.blog .pagination {
-    margin-bottom: 15px;
-}
-
-.blog .pagination .page-link {
-    color: #202C45;
-    border-radius: 0;
-    border-color: #202C45;
-}
-
-.blog .pagination .page-link:hover,
-.blog .pagination .page-item.active .page-link {
-    color: #E81C2E;
-    background: #202C45;
-}
-
-.blog .pagination .disabled .page-link {
-    color: #999999;
 }
 
 
@@ -2054,3 +1835,158 @@ a:focus {
 .footer .copyright p a:hover {
     color: #ffffff;
 }
+
+
+
+
+
+
+
+/*--form--*/
+.grid-form {
+    margin: 2em 0;
+}
+.grid-form1 {
+	background: #fff;
+    margin-bottom: 1em;
+    padding-left: 22em;
+     border: 1px solid #ebeff6;
+    border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.grid-form1:last-child {
+	margin-bottom: 0em;
+}
+.grid-form1 h2,.grid-form1 h3{
+    padding-left: 10px;
+    color: #1b93e1;
+    font-size:2em;
+    margin-bottom: 1em;
+}
+.grid-form1 form {
+ 	margin: 1.5em 0;
+}
+.form-control {
+    box-shadow: none;
+    outline: none;
+    border-radius: 0px;
+}
+.form-control:focus {
+    border-color: #ccc;
+    box-shadow: none;
+}
+.btn {
+    border-radius: 0px;
+    outline: none;
+}
+.btn-default:active, .btn-default:focus, .btn-default:hover {
+    outline: none !important;
+}
+input.form-control.input-lg ,select.form-control.input-lg{
+    margin-bottom: 1em;
+}
+input.form-control.input-sm,select.form-control.input-sm {
+    margin: 1.5em 0;
+}
+input#disabledTextInput,select#disabledSelect {
+    background-color: #FFF;
+}
+.email-list1{
+	 background-color: #fff;
+    padding: 1.8em;
+    border: 1px solid #ebeff6;
+    border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.form-control1 {
+    border: 1px solid #e0e0e0;
+    padding: 5px 8px;
+    color: #616161;
+    width: 100%;
+    font-size: 0.85em;
+    font-weight: 300;
+    height: 40px;
+    -webkit-appearance: none;
+	outline: none;
+	background: none;
+   box-shadow:none !important;
+}
+.input-lg {
+    border-radius: 0px;
+}
+.panel-footer {
+    background: none;
+}
+.input-icon.right > i, .input-icon.right .icon {
+    right: 12px;
+    float: right;
+}
+.input-icon > i, .input-icon .icon {
+    position: absolute;
+    display: block;
+    margin: 10px 8px;
+    line-height: 14px;
+    color: #999;
+}
+.input-group {
+  position: relative;
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  margin-bottom: 0em;
+}
+.has-success .input-group-addon {
+  border-color:#A4E7A5 !important;
+}
+.has-feedback label~.form-control-feedback {
+  top: 28px !important;
+}
+.has-success .form-control1 {
+    background-color: #f1f8e9;
+    border-color: #c5e1a5 !important;
+}
+.has-feedback label~.form-control-feedback {
+    top: 28px !important;
+}
+.has-error .form-control1 {
+    background-color: #fde0dc;
+    border-color: #f69988 !important;
+}
+.checkbox-inline label,.checkbox-inline1 label,.form-group label{
+	font-weight:400;
+}
+/*--validation--*/
+.validation-form{
+	background: #fff;
+    margin-bottom: 1em;
+    padding: 1em;
+     border: 1px solid #ebeff6;
+    border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.validation-system {
+    margin: 2em 0;
+}
+.validation-form h2 {
+    color: #1abc9c;
+    font-size: 1.8em;
+    border-bottom: 1px solid rgb(241, 233, 233);
+    padding-bottom: 0.3em;
+    margin-bottom: 1em;
+}
+/*----*/
