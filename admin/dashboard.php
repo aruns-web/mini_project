@@ -110,27 +110,7 @@ $completedbookings=$query3->rowCount();
 </a>
 
 		<div class="four-grids">
-			<a href="managecar-washingpoints.php" target="_blank">
-					<div class="col-md-3 four-grid">
-						<div class="four-w3ls">
-							<div class="icon">
-								<i class="glyphicon glyphicon-folder-open" aria-hidden="true"></i>
-							</div>
-							<div class="four-text">
-								<h3>Washing Points</h3>
-												<?php $sql5 = "SELECT id from tblwashingpoints";
-$query5= $dbh -> prepare($sql5);
-$query5->execute();
-$results5=$query5->fetchAll(PDO::FETCH_OBJ);
-$washingpoints=$query5->rowCount();
-					?>
-								<h4><?php echo htmlentities($washingpoints);?></h4>
-								
-							</div>
-							
-						</div>
-					</div>
-</a>
+
 
 					<div class="clearfix"></div>
 				</div>

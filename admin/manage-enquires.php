@@ -7,7 +7,20 @@ if(strlen($_SESSION['alogin'])==0)
 header('location:index.php');
 }
 else{ 
+	// code for cancel
+if(isset($_REQUEST['eid']))
+	{
+$eid=intval($_GET['eid']);
+$status=1;
 
+$sql = "UPDATE tblenquiry SET Status=:status WHERE  id=:eid";
+$query = $dbh->prepare($sql);
+$query -> bindParam(':status',$status, PDO::PARAM_STR);
+$query-> bindParam(':eid',$eid, PDO::PARAM_STR);
+$query -> execute();
+
+$msg="Enquiry  successfully read";
+}
 
 
 
@@ -17,7 +30,7 @@ else{
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>CWMS | All Bookings</title>
+<title>CWMS | Manage Enquiry</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -89,33 +102,30 @@ else{
 				</div>
 <!--heder end here-->
 <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="dashboard.php">Home</a><i class="fa fa-angle-right"></i>Manage All Bookings</li>
+                <li class="breadcrumb-item"><a href="dashboard.php">Home</a><i class="fa fa-angle-right"></i>Manage Enquiries</li>
             </ol>
 <div class="agile-grids">	
 				<!-- tables -->
-
+				<?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
+				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
 				<div class="agile-tables">
 					<div class="w3l-table-info">
-					  <h2>All Bookings</h2>
+					  <h2>Manage Enquiries</h2>
 					    <table id="table">
 						<thead>
 						  <tr>
-						  <th>Booking No.</th>
-							<th>Name</th>
-							<th width="200">Pacakge Type</th>
-
-							<th>Mobile No.</th>
-							<th>Vehicle No.</th>
-							<th>Vehicle Model</th>
-							<th>Washing Date/Time </th>
+						  <th>Ticket id</th>
+							<th width="200">Name</th>
+							<th>Email</th>
+							<th>Subject </th>
+							<th>Description </th>
 							<th width="200">Posting date </th>
 							<th>Action </th>
 							
 						  </tr>
 						</thead>
 						<tbody>
-<?php $sql = "SELECT *,tblcarwashbooking.id as bid from tblcarwashbooking
-join tblwashingpoints on tblwashingpoints.id=tblcarwashbooking.carWashPoint";
+<?php $sql = "SELECT * from tblenquiry";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
@@ -125,40 +135,26 @@ if($query->rowCount() > 0)
 foreach($results as $result)
 {				?>		
 						  <tr>
-							<td><?php echo htmlentities($result->bookingId);?></td>
-							<td><?php echo htmlentities($result->fullName);?></td>
+							<td width="120">#TCKT-<?php echo htmlentities($result->id);?></td>
+							<td width="50"><?php echo htmlentities($result->FullName);?></td>
 								<td width="50">
-								<?php $ptype=$result->packageType;
-if($ptype==1): echo "BASIC CLEANING ($10.99)";endif;
-if($ptype==2): echo "PREMIUM CLEANING ($20.99)";endif;
-if($ptype==3): echo "COMPLEX CLEANING ($30.99)";endif;
-
-
-							?></td>
+								<?php echo $result->EmailId;?></td>
 							
 						
-						<!--	<td><?php echo htmlentities($result->washingPointName	);?><br>
-								<?php echo htmlentities($result->washingPointAddress);?></td>  -->
+							<td width="200"><?php echo htmlentities($result->Subject);?></a></td>
+							<td width="400"><?php echo htmlentities($result->Description);?></td>
+							
+								<td width="50"><?php echo htmlentities($result->PostingDate);?></td>
+								<?php if($result->Status==1)
+{
+	?><td>Read</td>
+<?php } else {?>
 
-								<td><?php echo htmlentities($result->mobileNumber);?></td>
-								<td><?php echo htmlentities($result->vno);?></td>
-								<td><?php echo htmlentities($result->model);?></td>
-
-							<td><?php echo htmlentities($result->washDate." / ".$result->washTime);?></td>
-							<br>
-								<td><?php echo htmlentities($result->postingDate);?></td>
-				
-
-<td><a href="booking-details.php?bid=<?php echo htmlentities($result->bid);?>&&bookingid=<?php echo htmlentities($result->bookingId);?>">View</a>
+<td><a href="manage-enquires.php?eid=<?php echo htmlentities($result->id);?>" onclick="return confirm('Do you really want to read')" >Pending</a>
 </td>
 <?php } ?>
 </tr>
-						 <?php } else { ?>
-						 	<tr>
-						 		<td colspan="6" style="color:red;">No Record found</td>
-
-						 	</tr>
-						 <?php } ?>
+						 <?php } }?>
 						</tbody>
 					  </table>
 					</div>

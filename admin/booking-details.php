@@ -131,11 +131,11 @@ if($query->rowCount() > 0)
 {
 foreach($results as $result)
 {				?>		
-						  <tr>
+					    <tr>
 						  	<th width="200">Booking Id#</th>
 							<td><?php echo htmlentities($result->bookingId);?></td>
 							<th>Posting Date</th>
-								<td><?php echo htmlentities($result->postingDate);?></td>
+							<td><?php echo htmlentities($result->postingDate);?></td>
 						</tr>
 						<tr>
 							<th>Name</th>
@@ -147,32 +147,39 @@ foreach($results as $result)
 							<th>Package Type</th>
 								<td>
 								<?php $ptype=$result->packageType;
-if($ptype==1): echo "BASIC CLEANING ($10.99)";endif;
-if($ptype==2): echo "PREMIUM CLEANING ($20.99)";endif;
-if($ptype==3): echo "COMPLEX CLEANING ($30.99)";endif;
-
-
-							?></td>
-							
-						<th>Washing Point</th>
+                                if($ptype==1): echo "BASIC CLEANING ($10.99)";endif;
+                                if($ptype==2): echo "PREMIUM CLEANING ($20.99)";endif;
+                                if($ptype==3): echo "COMPLEX CLEANING ($30.99)";endif;
+                                ?></td>	
+						    <th>Washing Point</th>
 							<td><?php echo htmlentities($result->washingPointName	);?><br />
 								<?php echo htmlentities($result->washingPointAddress);?></td>
-							</tr>
-							<tr>
-								<th>Washing Date</th>
+					    </tr>
+						<tr>
+							<th>Washing Date</th>
 							<td><?php echo htmlentities($result->washDate);?></td>
 							<th>Washing Time</th>
 							<td><?php echo htmlentities($result->washTime);?></td>
-							</tr>
-							<tr>
+						</tr>
+						<tr>
 								<th>Message (if Any)</th>
-<td colspan="3"><?php echo htmlentities($result->message);?></td>
-							</tr>
+                                <td><?php echo htmlentities($result->message);?></td><!--  colspan="3" -->
+                                <th>Vehicle No.</th>
+								<td><?php echo htmlentities($result->vno);?></td>
+
+						</tr>
 							
-					<tr>
+					    <tr>
 								<th>Status</th>
-<td colspan="3"><?php echo htmlentities($result->status);?></td>
-							</tr>
+                                <td><?php echo htmlentities($result->status);?></td>
+								<th>Vehicle Model</th>
+								<td><?php echo htmlentities($result->model);?></td>
+
+						</tr>
+						<tr>
+								<th>E Mail</th>
+                                <td colspan="3"><?php echo htmlentities($result->email);?></td>
+						</tr>
 <?php if($result->adminRemark==''): ?>
 	<tr>
 		<td colspan="3">
