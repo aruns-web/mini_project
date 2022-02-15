@@ -190,7 +190,7 @@ else
                             <i class="flaticon-car-service-2"></i>
                             <h3>Wet Cleaning</h3>
                         </div>
-                    </div>
+                    </div> <!--
                     <div class="col-lg-3 col-md-6">
                         <div class="service-item">
                             <i class="flaticon-car-wash"></i>
@@ -202,7 +202,7 @@ else
                             <i class="flaticon-brush-1"></i>
                             <h3>Brake Reparing</h3>
                         </div>
-                    </div>
+                    </div>  -->
                 </div>
             </div>
         </div>

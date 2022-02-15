@@ -7,18 +7,24 @@ $ptype=$_POST['packagetype'];
 $wpoint=$_POST['washingpoint'];   
 $fname=$_POST['fname'];
 $mobile=$_POST['contactno'];
+$mail=$_POST['email'];
+$vehicleno=$_POST['vno'];
+$vmodel=$_POST['model'];
 $date=$_POST['washdate'];
 $time=$_POST['washtime'];
 $message=$_POST['message'];
 $status='New';
 $bno=mt_rand(100000000, 999999999);
-$sql="INSERT INTO tblcarwashbooking(bookingId,packageType,carWashPoint,fullName,mobileNumber,washDate,washTime,message,status) VALUES(:bno,:ptype,:wpoint,:fname,:mobile,:date,:time,:message,:status)";
+$sql="INSERT INTO tblcarwashbooking(bookingId,packageType,carWashPoint,fullName,mobileNumber,email,vno,model,washDate,washTime,message,status) VALUES(:bno,:ptype,:wpoint,:fname,:mobile,:mail,:vehicleno,:vmodel,:date,:time,:message,:status)";
 $query = $dbh->prepare($sql);
 $query->bindParam(':bno',$bno,PDO::PARAM_STR);
 $query->bindParam(':ptype',$ptype,PDO::PARAM_STR);
 $query->bindParam(':wpoint',$wpoint,PDO::PARAM_STR);
 $query->bindParam(':fname',$fname,PDO::PARAM_STR);
 $query->bindParam(':mobile',$mobile,PDO::PARAM_STR);
+$query->bindParam(':mail',$mail,PDO::PARAM_STR);
+$query->bindParam(':vehicleno',$vehicleno,PDO::PARAM_STR);
+$query->bindParam(':vmodel',$vmodel,PDO::PARAM_STR);
 $query->bindParam(':date',$date,PDO::PARAM_STR);
 $query->bindParam(':time',$time,PDO::PARAM_STR);
 $query->bindParam(':message',$message,PDO::PARAM_STR);
@@ -74,11 +80,11 @@ else
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Washing Plan</h2>
+                        <h2>Washing Packages</h2>
                     </div>
                     <div class="col-12">
                         <a href="index.php">Home</a>
-                        <a href="washing-plans.php">Price</a>
+                        <a href="washing-plans.php">Packages</a>
                     </div>
                 </div>
             </div>
@@ -194,6 +200,9 @@ foreach($results as $result)
             </select></p>
             <p><input type="text" name="fname" class="form-control" required placeholder="Full Name"></p>
             <p><input type="text" name="contactno" class="form-control" pattern="[0-9]{10}" title="10 numeric characters only" required placeholder="Mobile No."></p>
+            <p><input type="text" name="email" class="form-control" required placeholder="E Mail"></p>
+            <p><input type="text" name="vno" class="form-control" required placeholder="Vehicle No"></p>
+            <p><input type="text" name="model" class="form-control" required placeholder="Vehicle Model"></p>
             <p>Wash Date <br /><input type="date" name="washdate" required class="form-control"></p>
              <p>Wash Time <br /><input type="time" name="washtime" required class="form-control"></p>
              <p><textarea name="message"  class="form-control" placeholder="Message if any"></textarea></p>
