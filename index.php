@@ -129,7 +129,8 @@ else
                         </div>
                         <div class="about-content">
                             <p>
-                                Lorem ipsum dolor sit amet elit. In vitae turpis. Donec in hendre dui, vel blandit massa. Ut vestibu suscipi cursus. Cras quis porta nulla, ut placerat risus. Aliquam nec magna eget velit luctus dictum
+                            Car Wash  Management System is a brand that is literally going to change the way people think about car cleaning.
+                             It is a unique mechanized car cleaning concept where cars are getting pampered by the latest equipments including high pressure cleaning machines, spray injection and extraction machines, high powered vacuum cleaners, steam cleaners and so on. 
                             </p>
                             <ul>
                                 <li><i class="far fa-check-circle"></i>Seats washing</li>
@@ -208,19 +209,10 @@ else
         <!-- Service End -->
         
         
-        <!-- Facts Start -->
+        <!-- Facts Start --> <!--
         <div class="facts" data-parallax="scroll" data-image-src="img/facts.jpg">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="facts-item">
-                            <i class="fa fa-map-marker-alt"></i>
-                            <div class="facts-text">
-                                <h3 data-toggle="counter-up">25</h3>
-                                <p>Service Points</p>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="facts-item">
                             <i class="fa fa-user"></i>
@@ -250,7 +242,7 @@ else
                     </div>
                 </div>
             </div>
-        </div>
+        </div>        --> 
         <!-- Facts End -->
         
         
