@@ -19,11 +19,11 @@ foreach($results as $result)
 
                         <?php } ?>
                             <div class="footer-social">
-                                <a class="btn" href=""><i class="fab fa-twitter"></i></a>
+                            
                                 <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn" href=""><i class="fab fa-youtube"></i></a>
                                 <a class="btn" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
+                                
                             </div>
                         </div>
                     </div>
@@ -32,8 +32,8 @@ foreach($results as $result)
                             <h2>Popular Links</h2>
                               <a href="index.php">Home</a>
                             <a href="about.php">About Us</a>
-                            <a href="washing-plans.php">Washing Plans</a>
-                            <a href="location.php">Washing Points</a>
+                            <a href="washing-plans.php">Packages</a>
+                            <a href="new-booking.php">Booking</a>
                             <a href="contact.php">Contact Us</a>
                           
                             

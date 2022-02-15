@@ -5,7 +5,7 @@
                     <div class="col-lg-4 col-md-12">
                         <div class="logo">
                             <a href="index.php">
-                                <h1>CAR <span>Wash</span></h1>
+                                <h1>360 <span>AutoSpa</span></h1>
                                 <!-- <img src="img/logo.jpg" alt="Logo"> -->
                             </a>
                         </div>
@@ -75,14 +75,13 @@ foreach($results as $result)
                         <div class="navbar-nav mr-auto">
                             <a href="index.php" class="nav-item nav-link active">Home</a>
                             <a href="about.php" class="nav-item nav-link">About</a>
-                            <a href="washing-plans.php" class="nav-item nav-link">Washing Plans</a>
-                            <a href="location.php" class="nav-item nav-link">Washing Points</a>
-                    
+                            <a href="washing-plans.php" class="nav-item nav-link">Packages</a>
+                            <a href="new-booking.php" class="nav-item nav-link">Bookings</a>
                             <a href="contact.php" class="nav-item nav-link">Contact</a>
-                            <a href="admin" class="nav-item nav-link">admin</a>
+                        <!--<a href="Admin" class="nav-item nav-link">Admin</a> -->
                         </div>
                         <div class="ml-auto">
-                            <a class="btn btn-custom" href="contact.php">Get Appointment</a>
+                            <a class="btn btn-custom" href="Admin"><img src="img/logo/lock.svg" alt="Logo"> Admin</a>
                         </div>
                     </div>
                 </nav>
